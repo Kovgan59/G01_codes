@@ -138,6 +138,8 @@ if __name__ == '__main__':
     endpoint = find_endpoint(med_axis)
     sorted = sort_pixels(med_axis, endpoint)
     sorted_rdp = rdp(sorted, epsilon=0.7)
+    text = g_codes(sorted_rdp)
+    print(text)
 
     fig, axes = plt.subplots(2, 3, figsize=(12, 8), sharex=True, sharey=True)
     ax = axes.ravel()
